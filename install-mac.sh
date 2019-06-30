@@ -1,7 +1,6 @@
 # zsh
 brew install zsh
-which zsh >> /etc/shells
-chsh -s $(which zsh)
+sudo dscl . -create /Users/$USER UserShell `which zsh`
 
 # zplug
 brew install zplug
@@ -22,7 +21,7 @@ $(brew --prefix)/opt/fzf/install
 brew install tmux
 
 # dotfiles
-mv .zshrc ~/
+mv .zshrc_mac ~/.zshrc
 mv .dein ~/
 mv .tmux.conf ~/
 mv .config ~/
