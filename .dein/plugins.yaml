@@ -1,3 +1,4 @@
+---
 - repo: carlitux/deoplete-ternjs
   build: npm install -g tern
   if: executable('npm')

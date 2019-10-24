@@ -29,6 +29,8 @@ set softtabstop=0
 set expandtab
 set smarttab
 set shiftround
+set number             "行番号を表示
+set autoindent         "改行時に自動でインデントする
 
 " undo
 if has('persistent_undo')
@@ -42,7 +44,7 @@ if dein#load_state(expand('$DEIN'))
 
   " add plugin
   call dein#load_toml(expand('$CONFIG/plugins.toml'))
-  call dein#load_toml(expand('$CONFIG/plugins.yaml'))
+"  call dein#load_yaml(expand('$CONFIG/plugins.yaml'))
   call dein#load_toml(expand('$CONFIG/lazy.toml'))
 
   " Let dein manage dein
