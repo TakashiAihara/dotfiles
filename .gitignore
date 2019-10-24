@@ -1,0 +1,11 @@
+# ignore all
+*
+
+# whitelist
+!.config/nvim/
+!.dein/
+!.gitignore
+!.tmux.conf
+!.zshrc
+!.zshrc_mac
+!install-*.sh

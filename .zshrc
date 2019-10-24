@@ -148,3 +148,18 @@ function my_routes() {
   awk -F'Verb|GET|POST|PUT|PATCH|DELETE' '{if(match($1, /^ *$/)){printf "\" %s\n", $0;} else print}' | \
   awk '{printf "%-30s %-10s %-40s %-40s\n", $1,$2,$3,$4}'
 }
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+alias gpu='git push'
+alias gco='git checkout'
+alias gsh='git stash'
+alias gst='git status'
+alias gdi='git diff'
