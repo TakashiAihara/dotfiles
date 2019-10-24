@@ -163,3 +163,21 @@ alias gco='git checkout'
 alias gsh='git stash'
 alias gst='git status'
 alias gdi='git diff'
+
+
+
+if [[ $TERM = screen ]] || [[ $TERM = screen-256color ]] ; then
+
+  #if [ "`uname`" == "Darwin" ]; then
+  #  LOGDIR=$HOME/Documents/term_logs
+  #elif [ "`uname`" == "Linux" ]; then
+  #  LOGDIR=$HOME/term_logs
+  #fi
+
+  LOGDIR=$HOME/term_logs
+  LOGFILE=$(hostname)_$(date +%Y-%m-%d_%H%M%S_%N.log)
+  [ ! -d $LOGDIR ] && mkdir -p $LOGDIR
+  tmux  set-option default-terminal "screen" \; \
+    pipe-pane        "cat >> $LOGDIR/$LOGFILE" \; \
+    display-message  "Started logging to $LOGDIR/$LOGFILE"
+fi
