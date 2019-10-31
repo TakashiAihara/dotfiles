@@ -153,8 +153,6 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
