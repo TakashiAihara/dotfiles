@@ -44,8 +44,8 @@ if [ $? -ne 0 ]
 then 
 	echo brew install fzf
 	brew install fzf
-	echo '$(brew --prefix)/opt/fzf/install'
-	$(brew --prefix)/opt/fzf/install
+	echo '$(brew --prefix)/opt/fzf/install --all'
+	$(brew --prefix)/opt/fzf/install --all
 fi
 
 # tmux
